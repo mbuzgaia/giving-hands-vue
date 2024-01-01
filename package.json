@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.10",
+    "@fullcalendar/interaction": "^6.1.10",
+    "@fullcalendar/timegrid": "^6.1.10",
     "@fullcalendar/vue3": "^6.1.10",
     "axios": "^1.6.3",
+    "dhtmlx-scheduler": "^6.0.5",
     "flowbite": "^2.2.1",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
