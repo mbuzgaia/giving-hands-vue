@@ -71,6 +71,7 @@
     <div class="flex justify-center mt-8">
       <button
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
+        @click="showAlert"
       >
         Donate Now
       </button>
@@ -81,6 +82,14 @@
 <script>
 export default {
   name: 'DonateNowView',
+  methods: {
+    showAlert() {
+      const donationAmount = prompt('Enter the donation amount:'); // Prompt the user to enter the donation amount
+      if (donationAmount) {
+        alert(`Thank you for donating ${donationAmount}! Dinar`);
+      }
+    },
+  },
 };
 </script>
 
