@@ -1,12 +1,17 @@
 <template>
-  <div class="navbar">
-    <div class="user-info px-3">
-      <i class="border-slate-700 w-2 h-2"></i>
-      <img class="user-image" src="/logo.png" alt="User Image" />
-      <span class="user-name">{{ user.name }}</span>
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="/logo.png" alt="Logo" />
     </div>
-    <div class="title-bar">
-      <h1>{{ pageTitle }}</h1>
+    <div class="navbar">
+      <div class="user-info px-3">
+        <i class="border-slate-700 w-2 h-2"></i>
+        <img class="user-image" src="/square.png" alt="User Image" />
+        <span class="user-name">{{ user.name }}</span>
+      </div>
+      <div class="title-bar">
+        <h1>{{ pageTitle }}</h1>
+      </div>
     </div>
   </div>
 </template>
@@ -20,29 +25,58 @@ export default {
         name: 'John Doe',
         image: '/path/to/user-image.jpg',
       },
-      pageTitle: this.$route.meta.title,
+      pageTitle: this.$route.name,
     };
+  },
+  watch: {
+    $route(to, from) {
+      this.updatePageTitle(to);
+    },
+  },
+  methods: {
+    updatePageTitle(route) {
+      this.pageTitle = route.meta.title || '';
+    },
+  },
+  mounted() {
+    this.updatePageTitle(this.$route);
   },
 };
 </script>
 
 <style scoped>
-.navbar {
+.navbar-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #000000;
   background-color: white;
-  /* padding: 20px; */
+  height: 160px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 15%;
+  max-height: 160px;
+  border-right: 2px solid #000000;
+  padding: 1rem;
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: left;
+  padding: 1.5rem;
+}
+.navbar {
   color: black;
   position: sticky;
   height: fit-content;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-}
-
-.navbar a:hover {
-  color: #ddd;
+  width: 100%;
 }
 
 .user-info {
@@ -54,15 +88,16 @@ export default {
   margin-bottom: 20px;
   padding-bottom: 20px;
   width: 100%;
+  height: 90px;
 }
 
 .title-bar {
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: 3px solid #000000;
   width: 100%;
+  height: 80px;
   font-size: 2rem;
   font-weight: bold;
 }

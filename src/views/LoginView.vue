@@ -4,7 +4,7 @@
       class="bg-circle w-full col-span-11 aspect-square bg-slate-500 z-0 rounded-t-full fixed translate-auto bottom-10 sm:rounded-b-none"
     ></div>
     <div
-      class="col-span-9 col-start-2 rounded-lg sm:col-span-9 sm:col-start-2 md:col-span-3 md:col-start-5 mt-12 bg-white border-2 border-slate-800 z-10"
+      class="max-h-[38rem] h-fit col-span-9 col-start-2 rounded-lg sm:col-span-9 sm:col-start-2 md:col-span-3 md:col-start-5 mt-12 bg-white border-2 border-slate-800 z-10"
     >
       <div class="grid grid-flow-row sm:grid-flow-col grid-row-2 sm:grid-col-2">
         <div class="flex items-center justify-center mx-auto gap-2">
@@ -115,7 +115,7 @@ export default {
   name: 'LoginView',
   methods: {
     async login() {
-      this.$router.push('/main');
+      this.$router.push('/');
     },
   },
   setup() {

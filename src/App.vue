@@ -1,12 +1,7 @@
 <template>
-  <router-link to="/">Home</router-link> |
-  <router-link to="/about">About</router-link> |
-  <router-link to="/login">Login</router-link> |
-  <router-link to="/signup">Sign Up</router-link> |
-  <router-link to="/">Timetable</router-link>
   <div class="grid grid-cols-12 h-screen">
     <NavbarComponent class="col-span-12" v-if="!$route.meta.hideNavbar" />
-    <SideBarComponent
+    <SidebarComponent
       class="col-span-2 full-minus-navbar"
       v-if="!$route.meta.hideNavbar"
     />
@@ -22,13 +17,13 @@
 
 <script>
 import NavbarComponent from './components/NavbarComponent.vue';
-import SideBarComponent from './components/SideBarComponent.vue';
+import SidebarComponent from './components/SidebarComponent.vue';
 
 export default {
   name: 'App',
   components: {
     NavbarComponent,
-    SideBarComponent,
+    SidebarComponent,
   },
 };
 </script>
@@ -45,7 +40,6 @@ body {
 }
 
 router-view {
-  padding: 2rem;
-  max-height: 100vh;
+  height: calc(100vh - 60px);
 }
 </style>

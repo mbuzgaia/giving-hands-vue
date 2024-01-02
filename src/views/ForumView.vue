@@ -116,6 +116,7 @@ export default {
   width: 280px;
   height: 45px;
   margin: 0 5px;
+  cursor: pointer;
 }
 
 .dropdown-item {
@@ -126,7 +127,7 @@ export default {
 
 .search-bar {
   padding: 5px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #b5b5b5;
   border-radius: 3px;
   width: 20rem;
   height: 45px;

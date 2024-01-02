@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar h-screen">
+  <div class="sidebar min-h-screen">
     <div class="sidebar-links">
       <router-link
         class="hover:bg-slate-200 my-2 py-4 mx-[10px] border-b-2"
@@ -33,6 +33,16 @@
         to="/settings"
         >Settings</router-link
       >
+      <router-link
+        class="hover:bg-slate-200 my-2 py-4 mx-[10px] border-b-2 "
+        to="/login"
+        >Login</router-link
+      >
+      <router-link
+        class="hover:bg-slate-200 my-2 py-4 mx-[10px] border-b-2 "
+        to="/signup"
+        >Sign Up</router-link
+      >
       <p
         class="hover:bg-slate-200 my-2 py-4 mx-[10px] hover:cursor-pointer"
         @click="logout()"
@@ -45,7 +55,7 @@
 
 <script>
 export default {
-  name: 'SideBarComponent',
+  name: 'SidebarComponent',
 };
 </script>
 
@@ -66,10 +76,12 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 10px;
 }
 
 router-link {
   display: block;
+  padding: 5px 0;
 }
 
 .sidebar-footer {

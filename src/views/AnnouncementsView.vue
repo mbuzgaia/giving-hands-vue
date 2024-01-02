@@ -116,6 +116,7 @@ export default {
   width: 280px;
   height: 45px;
   margin: 0 5px;
+  cursor: pointer;
 }
 
 .dropdown-item {

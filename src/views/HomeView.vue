@@ -1,8 +1,12 @@
+<template>
+  <div class="content p-[20px]">
+    <FullCalendar class="w-full max-h-screen" :options="calendarOptions" />
+  </div>
+</template>
 <script>
 import FullCalendar from '@fullcalendar/vue3';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
-import { Calendar } from '@fullcalendar/core';
 import timeGridPlugin from '@fullcalendar/timegrid';
 
 export default {
@@ -31,6 +35,10 @@ export default {
   },
 };
 </script>
-<template>
-  <FullCalendar :options="calendarOptions" />
-</template>
+
+<style>
+.content {
+  height: 100%;
+  border-color: black;
+}
+</style>

@@ -4,9 +4,9 @@ import LoginView from '../views/LoginView.vue';
 import AnnouncementsView from '../views/AnnouncementsView.vue';
 import SignupView from '../views/SignupView.vue';
 import ForumView from '../views/ForumView.vue';
-import MyCourseView from '../views/MyCourseView.vue';
-import MyAccountView from '../views/MyAccountView.vue'; // Add this line
-import SettingsView from '../views/SettingsView.vue'; // Add this line
+import MyCoursesView from '../views/MyCoursesView.vue';
+import MyAccountView from '../views/MyAccountView.vue';
+import SettingsView from '../views/SettingsView.vue';
 
 const routes = [
   {
@@ -53,11 +53,11 @@ const routes = [
     },
   },
   {
-    path: '/my-course',
-    name: 'my-course',
-    component: MyCourseView,
+    path: '/my-courses',
+    name: 'my-courses',
+    component: MyCoursesView,
     meta: {
-      title: 'My Course',
+      title: 'My Courses',
       hideNavbar: false,
     },
   },
