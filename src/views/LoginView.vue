@@ -1,43 +1,35 @@
 <template>
   <main class="grid grid-flow-col grid-cols-11">
     <div
-      class="bg-circle w-full col-span-11 aspect-square bg-slate-500 z-0 rounded-t-full fixed translate-auto bottom-10 sm:rounded-b-none"
-    ></div>
-    <div
-      class="max-h-[38rem] h-fit col-span-9 col-start-2 rounded-lg sm:col-span-9 sm:col-start-2 md:col-span-3 md:col-start-5 mt-12 bg-white border-2 border-slate-800 z-10"
+      class="max-h-[38rem] h-fit col-span-9 col-start-2 rounded-lg sm:col-span-9 sm:col-start-2 md:col-span-3 md:col-start-5 mt-12 bg-slate-600 border-2 border-slate-800 z-10"
     >
-      <div class="grid grid-flow-row sm:grid-flow-col grid-row-2 sm:grid-col-2">
-        <div class="flex items-center justify-center mx-auto gap-2">
-          <img
-            class="mx-auto mt-6 w-12 h-12 my-auto sm:ml-0"
-            src="/logo.png"
-            alt=""
-          />
-          <p class="mx-auto w-fit text-xl text-center font-semibold pt-8">
-            OnTime
-          </p>
-        </div>
-      </div>
+      <div
+        class="grid grid-flow-row sm:grid-flow-col grid-row-2 sm:grid-col-2"
+      ></div>
       <div class="divider h-10"></div>
-      <p class="mx-auto w-fit text-2xl mb-12 font-semibold">
-        Good to see you again!
+      <p class="mx-auto w-fit text-2xl mb-12 font-semibold text-slate-200">
+        Giving Hands!
       </p>
       <div class="grid grid-flow-col grid-cols-12">
-        <p class="col-span-10 col-start-2 text-sm font-medium">Email</p>
+        <p class="col-span-10 col-start-2 text-sm font-medium text-slate-200">
+          Email
+        </p>
       </div>
       <div class="grid grid-flow-col grid-cols-12 my-2">
         <input
           v-model="email"
           id="email"
           type="email"
-          placeholder="yourname_id@university.edu.ly"
-          class="col-span-10 rounded-sm col-start-2 h-[3.375rem] bg-gray-50 pr-4 text-sm font-normal p-3.5"
+          placeholder="yourname@gmail.com"
+          class="col-span-10 rounded-sm col-start-2 h-[3.375rem] bg-slate-400 pr-4 text-sm font-normal p-3.5"
           required
         />
       </div>
       <div class="grid grid-flow-col grid-cols-12 my-2"></div>
       <div class="grid grid-flow-col grid-cols-12">
-        <p class="col-span-10 col-start-2 text-sm font-medium">Password</p>
+        <p class="col-span-10 col-start-2 text-sm font-medium text-slate-200">
+          Password
+        </p>
       </div>
       <div class="grid grid-flow-col grid-cols-12 my-2">
         <input
@@ -45,7 +37,7 @@
           type="password"
           id="password"
           placeholder="••••••••"
-          class="col-span-10 rounded-sm col-start-2 h-[3.375rem] bg-gray-50 pr-4 text-lg font-normal p-3.5"
+          class="col-span-10 rounded-sm col-start-2 h-[3.375rem] bg-slate-400 pr-4 text-lg font-normal p-3.5"
           required
         />
       </div>
@@ -73,31 +65,32 @@
               />
             </div>
             <div class="ml-2 text-sm">
-              <label for="remember" class="text-gray-500 ">Remember me</label>
+              <label for="remember" class="text-gray-400 ">Remember me</label>
             </div>
           </div>
           <router-link
             to="#"
-            class="text-sm font-medium text-primary-600 hover:underline text-blue-600"
+            class="text-sm font-medium text-primary-600 hover:underline text-yellow-400"
           >
             Forgot password?
           </router-link>
         </div>
       </div>
-      <div class="grid grid-flow-col grid-cols-12 my-4 pb-5">
-        <button
-          @click="submitLoginForm()"
-          class="bg-[#28419E] col-span-10 col-start-2 h-[3.375rem] text-white font-medium text-lg rounded-sm"
-        >
-          Login
-        </button>
-      </div>
+      <router-link to="/home">
+        <div class="grid grid-flow-col grid-cols-12 my-4 pb-5">
+          <button
+            class="bg-slate-800 col-span-10 col-start-2 h-[3.375rem] hover:bg-slate-700 text-white font-medium text-lg rounded-sm"
+          >
+            Login
+          </button>
+        </div>
+      </router-link>
       <div class="col-span-10 col-start-2">
-        <p class="text-center text-sm font-normal text-slate-700">
+        <p class="text-center text-sm font-normal text-slate-400">
           Don’t have an account yet?
           <router-link
-            to="/signup"
-            class="text-blue-700 font-semibold text-primary-600 hover:underline"
+            to="/home"
+            class="text-yellow-400 font-semibold text-primary-600 hover:underline"
             >Sign Up Now!</router-link
           >
         </p>
